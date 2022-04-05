@@ -41,8 +41,10 @@ html{
     background-size: cover;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
-    padding: 0;
+}
+
+.page br {
+    display: none;
 }
 
 .section-1-heading {
