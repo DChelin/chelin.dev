@@ -41,6 +41,7 @@ html{
     background-size: cover;
     display: flex;
     flex-direction: column;
+    margin-top: 0;
 }
 
 .section-1-heading {
@@ -418,14 +419,6 @@ html{
 /*End of Section 5 */
 
 /*Responsive*/
-
-    html,body{
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-    }
 
 @media(max-width:1200px){
     .services{
