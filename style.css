@@ -41,6 +41,8 @@ html{
     background-size: cover;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
+    padding: 0;
 }
 
 .section-1-heading {
