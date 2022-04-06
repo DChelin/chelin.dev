@@ -444,13 +444,8 @@ html{
         flex-wrap: wrap;
     }
 
-    .section-1-heading{
-        margin-top: 4rem;
-    }
-
     .section-1-btn{
         font-size: 2rem;
-        margin-top: -2.5rem;
     }
 
 .service{
@@ -584,4 +579,5 @@ html{
         letter-spacing: .2rem;
         text-align: center;
     }
+}
 /* End of Responsive */
