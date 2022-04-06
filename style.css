@@ -428,10 +428,29 @@ html{
 
 /*Responsive*/
 
-@media(max-width:1200px){
+@media(max-width:1920px){
+    .section-1-btn{
+        margin-bottom: -2rem;
+        font-size: 3rem;
+    }
+
+    .person-name{
+        font-size: 4rem;
+    }
+
+@media(max-width:1366px){
     .services{
         height: auto;
         flex-wrap: wrap;
+    }
+
+    .section-1-heading{
+        margin-top: 4rem;
+    }
+
+    .section-1-btn{
+        font-size: 2rem;
+        margin-top: -2.5rem;
     }
 
 .service{
@@ -442,75 +461,127 @@ html{
     height: 80vh;
 }
 
-@media(max-width: 800px){
-    .section-1-heading{
-       font-size: 4rem; 
-    }
-.progress-bar{
-    width: 50rem;
-    }
+.section-1-btn{
+    margin-bottom: 3rem;
 }
 
-@media(max-width: 600px){
+@media(max-width:1325px){
+    .person-name{
+        font-size: 3.5rem;
+    }
+
+@media(max-width:360px){
     .section-1-heading{
+        font-size: 3rem;
+        font-weight: 350;
+    }
+
+    .person-img{
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .person-name{
+        font-size: 2.5rem;
+    }
+
+    .section-1-btn{
+        font-size: 1.7rem;
+        margin-top: -1rem;
+    }
+
+    .navbar-link{
+        font-size: 1.7rem;
+        letter-spacing: .1rem;
+        margin: 0.3rem;
+    }
+
+    .section-2-heading{
+        font-size: 3rem;
+    }
+
+    .progress-bars-wrapper{
+        width: 30rem;
+    }
+
+    .progress-bar{
+        width: 30rem;
+    }
+
+    .services{
+        width: 50%;
+        height: 75vh;
+        align-items: center;
+        margin-bottom: -6rem;
+    }
+    
+    .service{
+        text-align: center;
+    }
+    
+    .service i{
         font-size: 4rem;
-    }
-.navbar-link{
-    margin: .2rem;
-    font-size: 2rem;
-}
-
-.section-2{
-    padding: 10rem;
-}
-
-.section-2-heading{
-    margin-bottom: 10rem;
-}
-
-.progress-bar{
-    width: 45rem;
-}
-
-.project-img{
-    width: 100%;
-}
-
-.contact-form{
-    width: 40rem;
-}
-
-.copyright{
-    width: 70%;
-}
-}
-
-@media(max-width: 500px){
-    html{
-        font-size: 55%;
-
-    }
-}
-
-@media(max-width: 450px){
-    html{
-        font-size: 45%;
+        margin-bottom: 1rem;
     }
 
-.section-1-heading{
-    font-size: 4rem;
-}
+    .section-3-heading{
+        font-size: 3rem;
+    }
 
-.navbar-link{
-    margin: 0 1.5rem;
-}
+    .projects-wrapper{
+        max-width: 28rem;
+    }
+    
+    .project-name{
+        font-size: 2rem;
+        font-weight: 500;
+    }
 
-.section-2-heading{
-    text-align: center;
-}
+    .project-link{
+        font-size: 1.5rem;
+        font-weight: 400;
+        letter-spacing: 1rem;
+        border: .1rem solid #aa0005;
+        border-radius: 10px;
+        position: absolute;
+        transition: bottom 0.3s;
+    }
 
-.progress-bar{
-    width: 40rem;
-}
-}
+    .section-4-heading{
+        font-size: 3rem;
+    }
+    .contact-form{
+        width: 28rem;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+    
+    .contact-form input,
+    .contact-form textarea{
+        width: 100%;
+        padding: .5rem;
+        margin: .5rem 0;
+        font-size: 1.5rem;
+    }
+    
+    .contact-form textarea{
+        height: 10rem;
+        max-height: 15rem;
+        max-width: 100%;
+    }
+
+    .section-5{
+        width: 360px;
+        height: 20rem;
+    }
+    
+    .social-media-link i{
+        font-size: 2.5rem;
+    }
+    
+    .copyright{
+        font-size: 1.2rem;
+        letter-spacing: .2rem;
+        text-align: center;
+    }
 /* End of Responsive */
