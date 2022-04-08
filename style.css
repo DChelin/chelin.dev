@@ -517,6 +517,9 @@ html{
     .progress-bar{
     width: 50rem;
     }
+    .download-btn{
+        margin-top: 14rem;
+    }
     
 @media(max-width: 600px){
     .section-1-heading{
@@ -575,6 +578,28 @@ html{
     
     .progress-bar{
         width: 40rem;
-    }  
+    } 
+
+@media(max-width: 412px){
+    html{
+        font-size: 45%;
+    }
+    .download-btn{
+        margin-top: 35rem;
+    }
+
+@media(max-width: 360px){
+    html{
+        font-size: 35%;
+    }
+    .section-1-btn{
+        font-size: 3rem;
+        margin-bottom: -4rem;
+    }
+
+@media(max-width: 390px){
+    .navbar-link{
+        font-size: 3rem;
+    }
 }
 /* End of Responsive */
