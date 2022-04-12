@@ -597,9 +597,10 @@ html{
         margin-bottom: -4rem;
     }
 
-@media(max-width: 390px){
-    .navbar-link{
-        font-size: 3rem;
+@media(max-width: 4000px){
+    .section-5{
+        background-image: cover;
     }
-}
+
+
 /* End of Responsive */
