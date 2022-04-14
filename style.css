@@ -456,7 +456,8 @@ html{
 
 @media(max-width:1920px){
     .section-1-btn{
-        margin-bottom: -2rem;
+        margin-bottom: 1;
+        margin-top: -2rem;
         font-size: 3rem;
     }
 
@@ -601,6 +602,5 @@ html{
     .section-5{
         background-image: cover;
     }
-
 
 /* End of Responsive */
