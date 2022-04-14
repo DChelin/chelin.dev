@@ -573,7 +573,7 @@ html{
     html{
         font-size: 45%;
     }
-@media(max-width: 300px){
+@media(max-width: 385px)(max-height:854px){
     html{
         font-size: 40%;
     }
