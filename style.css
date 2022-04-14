@@ -569,7 +569,14 @@ html{
     html{
         font-size: 45%;
     }
-    
+@media(max-width: 450px){
+    html{
+        font-size: 45%;
+    }
+@media(max-width: 300px){
+    html{
+        font-size: 40%;
+    }
     .section-1-heading{
         font-size: 4rem;
     }
@@ -598,10 +605,6 @@ html{
         font-size: 30%;
     }
 
-@media(max-width: 360px){
-    html{
-        font-size: 35%;
-    }
     .section-1-btn{
         font-size: 3rem;
         margin-bottom: -4rem;
