@@ -461,6 +461,10 @@ html{
         font-size: 3rem;
     }
 
+    .section-5{
+        background-image: cover;
+    }
+
     .person-name{
         font-size: 4rem;
     }
@@ -596,6 +600,10 @@ html{
     .section-1-btn{
         font-size: 3rem;
         margin-bottom: -4rem;
+    }
+
+    .navbar{
+        font-size: 40%;
     }
 
 @media(max-width: 4000px){
