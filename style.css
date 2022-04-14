@@ -250,8 +250,8 @@ html{
     background-color: #050505;
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
+    align-items: center;   
+    }
 
 /*End of Dowload Section */
 
@@ -573,7 +573,7 @@ html{
     html{
         font-size: 45%;
     }
-@media(max-width: 385px)(max-height:854px){
+@media(max-width: 385px)(max-height:854){
     html{
         font-size: 40%;
     }
@@ -592,6 +592,11 @@ html{
     .progress-bar{
         width: 40rem;
     } 
+
+    .download-btn-section{
+        margin-bottom: -5rem;
+        padding-top: 25rem;
+    }
 
 @media(max-width: 412px){
     html{
