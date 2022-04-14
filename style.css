@@ -422,6 +422,7 @@ html{
     background-color: #050505;
     background: url(images/bg-3-2.png) center no-repeat;
     color: #fff;
+    background-size: cover;
 }
 
 .social-media{
