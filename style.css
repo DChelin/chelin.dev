@@ -593,6 +593,10 @@ html{
         margin-top: 35rem;
     }
 
+    .navbar{
+        font-size: 30%;
+    }
+
 @media(max-width: 360px){
     html{
         font-size: 35%;
@@ -603,7 +607,7 @@ html{
     }
 
     .navbar{
-        font-size: 40%;
+        font-size: 30%;
     }
 
 @media(max-width: 4000px){
