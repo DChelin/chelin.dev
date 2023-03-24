@@ -600,8 +600,9 @@ html{
     } 
 
     .download-btn-section{
+         
         margin-bottom: -5rem;
-        padding-top: 25rem;
+        padding: 20rem 0 5rem 0;
     }
 
 @media(max-width: 412px){
