@@ -1,3 +1,3 @@
 layout: page
 title: "notes"
-permalink: /notes
+permalink: notes.md
