@@ -56,15 +56,45 @@
         p {
             line-height: 1.6;
         }
+
+        /* Style for the navigation */
+        ul.nav-menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul.nav-menu li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        ul.nav-menu li:last-child {
+            margin-right: 0;
+        }
+
+        ul.nav-menu li a {
+            text-decoration: none;
+            color: #94be69;
+            font-weight: bold;
+        }
+
+        ul.nav-menu li a:hover {
+            color: #94be69;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1 style="text-align: center;">Notes</h1>
         <p>Select a section:</p>
-        <p><a href="#html">HTML</a></p>
-        <p><a href="#css">CSS</a></p>
-        <p><a href="#javascript">Javascript</a></p>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#html">HTML</a></li>
+                <li><a href="#css">CSS</a></li>
+                <li><a href="#javascript">Javascript</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <h2 id="html">HTML:</h2>
