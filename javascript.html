@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 
-!--- Adding a button with inline Javascript ---!
-!--- Button has alert as Hi! ---!
-
 <html>
     <head>
         <title>Javascript</title>
 
     </head>
+    
     <body>
-        <button onClick='alert("Hi")'>Click Me!</button>
+
+        <!--- Adding a paragraph text and adding an id to target with Javascript-->
+        <p id="text">Hello World!</p>
+
+        <!--- Adding a button with inline Javascript -->
+        <!--- Button has alert as Hi! -->
+        <button onClick="alert('Hi')">Click Me!</button>
+
+        <!--- Any Javascript in the script tags will be executed fast and -->
+        <!--- this is regarded as best practice when adding Javascript into -->
+        <!--- a file, not by using inline Javascript. -->
+        <!--- Adding an alert that the page has loaded below -->
+        <!--- Use the console in your browser to identify errors and run code -->
+
+        <script type="text/javascript">
+
+            //Commenting out alert item...
+           // alert('Page is loaded!');
+
+            //Getting element by ID below as per note in line 11. Adding innerHTML
+            // And changing Hello World to Hello Dev!
+            document.getElementById("text").innerHTML = "Hello Dev!"
+
+        </script>
     </body>
 </html>
