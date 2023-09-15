@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Notes</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1b25;
+        }
+        #notes {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #1a1b25;
+            color: #94be69;
+        }
+        #notes textarea {
+            width: 100%;
+            height: 100px;
+            resize: none;
+        }
+        #notes button {
+            margin-top: 10px;
+        }
+        .note {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #94be69;
+            background-color: #1a1b25;
+        }
+        .note h2 {
+            margin: 0;
+            font-size: 20px;
+            color: #94be69;
+        }
+        .note .date {
+            color: #f5778f;
+            font-size: 14px;
+        }
+        .note .delete {
+            color: #8cdefd;
+            cursor: pointer;
+            font-size: 12px;
+            border: 1px solid #8cdefd;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="notes">
+        <h1>DAILY NOTES</h1>
+        <input type="text" id="noteTitle" placeholder="Enter note title">
+        <textarea id="noteText" placeholder="Enter your daily note here"></textarea>
+        <input type="file" id="imageUpload" accept="image/*">
+        <button id="addNote">Add Note</button>
+        <div id="noteList"></div>
+    </div>
+
+    <script>
+        // Function to add a new note
+        function addNote() {
+            const noteTitle = document.getElementById("noteTitle").value;
+            const noteText = document.getElementById("noteText").value;
+            const imageUpload = document.getElementById("imageUpload");
+
+            if (noteTitle.trim() !== "" || noteText.trim() !== "" || imageUpload.files.length > 0) {
+                const noteList = document.getElementById("noteList");
+                const noteDiv = document.createElement("div");
+                noteDiv.classList.add("note");
+                const date = new Date().toLocaleDateString();
+                noteDiv.innerHTML = `<h2>${noteTitle}</h2><p class="date">${date}</p><p>${noteText}</p>`;
+
+                // Check if an image is uploaded
+                if (imageUpload.files.length > 0) {
+                    const image = document.createElement("img");
+                    image.classList.add("attached-image");
+                    const imageURL = URL.createObjectURL(imageUpload.files[0]);
+                    image.src = imageURL;
+                    noteDiv.appendChild(image);
+                }
+
+                const deleteButton = document.createElement("span");
+                deleteButton.classList.add("delete");
+                deleteButton.textContent = "Delete";
+                deleteButton.onclick = function () {
+                    deleteNoteAndImage(noteDiv);
+                };
+                noteDiv.appendChild(deleteButton);
+
+                noteList.appendChild(noteDiv);
+                document.getElementById("noteTitle").value = "";
+                document.getElementById("noteText").value = "";
+                imageUpload.value = ""; // Clear the file input
+
+                // Save the note to local storage
+                saveNoteToLocalStorage({ title: noteTitle, text: noteText, date, image: imageUpload.files[0] });
+            }
+        }
+
+        // Function to save a note to local storage
+        function saveNoteToLocalStorage(note) {
+            let notes = [];
+            if (localStorage.getItem("notes")) {
+                notes = JSON.parse(localStorage.getItem("notes"));
+            }
+            notes.push(note);
+            localStorage.setItem("notes", JSON.stringify(notes));
+        }
+
+        // Function to load notes from local storage and display them
+        function loadNotesFromLocalStorage() {
+            const noteList = document.getElementById("noteList");
+            let notes = [];
+            if (localStorage.getItem("notes")) {
+                notes = JSON.parse(localStorage.getItem("notes"));
+            }
+            notes.forEach((note) => {
+                const noteDiv = document.createElement("div");
+                noteDiv.classList.add("note");
+                noteDiv.innerHTML = `<h2>${note.title}</h2><p class="date">${note.date}</p><p>${note.text}</p>`;
+
+                // Check if an image is attached to the note
+                if (note.image) {
+                    const image = document.createElement("img");
+                    image.classList.add("attached-image");
+                    image.src = note.image;
+                    noteDiv.appendChild(image);
+                }
+
+                const deleteButton = document.createElement("span");
+                deleteButton.classList.add("delete");
+                deleteButton.textContent = "Delete";
+                deleteButton.onclick = function () {
+                    deleteNoteAndImage(noteDiv);
+                };
+                noteDiv.appendChild(deleteButton);
+
+                noteList.appendChild(noteDiv);
+            });
+        }
+
+        // Function to delete a note and its associated image
+        function deleteNoteAndImage(noteDiv) {
+            const noteList = document.getElementById("noteList");
+            const notes = JSON.parse(localStorage.getItem("notes"));
+            const noteIndex = Array.from(noteList.children).indexOf(noteDiv);
+            if (noteIndex !== -1) {
+                // Remove the associated image file from storage
+                const imageToDelete = notes[noteIndex].image;
+                if (imageToDelete) {
+                    URL.revokeObjectURL(imageToDelete);
+                }
+
+                notes.splice(noteIndex, 1);
+                localStorage.setItem("notes", JSON.stringify(notes));
+                noteList.removeChild(noteDiv);
+            }
+        }
+
+        // Load saved notes when the page loads
+        window.addEventListener("load", loadNotesFromLocalStorage);
+
+        // Event listener for the "Add Note" button
+        document.getElementById("addNote").addEventListener("click", addNote);
+    </script>
+</body>
+</html>
