@@ -154,7 +154,7 @@
             $message = $_POST["message"];
             
             // Your email address where you want to receive the form submissions
-            $to = "your-email@example.com";
+            $to = "devlynchelin6@gmail.com";
         
             // Subject of the email
             $subject = "New Form Submission from $name";
@@ -194,7 +194,7 @@
         </body>
         </html>
         <!--End of Section 4 -->
-        
+
         <!-- Section 5 -->
       <footer class="section-5 center">
         <div class="social-media">
