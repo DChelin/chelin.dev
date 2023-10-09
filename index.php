@@ -146,23 +146,55 @@
         </section>
         <!--End of Section 3-->
         
-        <!--Section 4-->
-        <section class="section-4" 
-        id="section-4">
-            <h1 class="section-heading 
-            section-4-heading">.Contact-me</h1>
-            <form action="https://getform.io/f/643c2e39-1dde-413f-9c88-b001f9ebc9fc" 
-            method="POST" class="contact-form center">
-                <input type ="text" placeholder="Name">
-                <input type ="email" 
-                placeholder="Email">
-                <input type="hidden" name="_gotcha">
-                <textarea placeholder="Message"></textarea>
-                <input type="submit" value="Submit"
-                class="contact-form-btn">
-            </form>
-        </section>
-        <!--End of Section 4-->
+        <!--Start of Section 4 -->
+      <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $name = $_POST["name"];
+            $email = $_POST["email"];
+            $message = $_POST["message"];
+            
+            // Your email address where you want to receive the form submissions
+            $to = "your-email@example.com";
+        
+            // Subject of the email
+            $subject = "New Form Submission from $name";
+        
+            // Email message body
+            $message_body = "Name: $name\n";
+            $message_body .= "Email: $email\n";
+            $message_body .= "Message:\n$message";
+        
+            // Additional headers
+            $headers = "From: $email";
+        
+            // Check if the email was sent successfully
+            if (mail($to, $subject, $message_body, $headers)) {
+                echo "Thank you for your submission!";
+            } else {
+                echo "Oops! Something went wrong. Please try again later.";
+            }
+        }
+        ?>
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Contact Form</title>
+        </head>
+        <body>
+            <section class="section-4" id="section-4">
+                <h1 class="section-heading section-4-heading">Contact Me</h1>
+                <form action="" method="POST" class="contact-form center">
+                    <input type="text" name="name" placeholder="Name">
+                    <input type="email" name="email" placeholder="Email">
+                    <textarea name="message" placeholder="Message"></textarea>
+                    <input type="submit" value="Submit" class="contact-form-btn">
+                </form>
+            </section>
+        </body>
+        </html>
+        <!--End of Section 4 -->
+        
         <!-- Section 5 -->
       <footer class="section-5 center">
         <div class="social-media">
