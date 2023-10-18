@@ -335,7 +335,7 @@ html{
 }
 
 .project-img{
-    width:40rem;
+    width:34rem;
     transition: opacity 0.3s;
 }
 
@@ -455,7 +455,7 @@ html{
     letter-spacing: .2rem;
     font-weight: 300;
     text-align: center;
-    margin-bottom: -7.5rem;
+    margin-bottom: -5.5rem;
 }
 /*End of Section 5 */
 
