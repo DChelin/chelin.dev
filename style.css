@@ -430,6 +430,11 @@ html{
     letter-spacing: 1rem;
     cursor: pointer;
 }
+
+.spacer{
+    margin-bottom: 50px;
+}
+
 /* End of Section 4 */
 
 /* Section 5 */
