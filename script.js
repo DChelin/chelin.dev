@@ -12,14 +12,14 @@ window.addEventListener("scroll", () =>{
 });
 
 const mainFn = () =>{
-    if (window.pageYOffset >= navbarOffsetTop){
+    if (window.scrollY >= navbarOffsetTop){
         navbar.classList.add("sticky")
     } else {
         navbar.classList.remove("sticky")
     }
 
 sections.forEach((section, i) =>{
-    if(window.pageYOffset >= section.offsetTop - 10){
+    if(window.scrollY >= section.offsetTop - 10){
         navbarLinks.forEach(navbarLink =>{
             navbarLink.classList.remove('change');
         });
@@ -28,7 +28,7 @@ sections.forEach((section, i) =>{
     }
  });
 
- if (window.pageYOffset + window.innerHeight >= progress.offsetTop) {
+ if (window.scrollY + window.innerHeight >= progress.offsetTop) {
     document.querySelectorAll(".progress-percent").forEach((el, i) => {
       el.style.width = `${progressBarPercents[i]}%`;
       el.previousElementSibling.firstElementChild.textContent =
