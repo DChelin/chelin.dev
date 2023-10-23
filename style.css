@@ -560,7 +560,8 @@ html{
     }
     
     .section-2{
-        padding: 50rem;
+        padding: 10rem;
+        padding-bottom: 50rem;
     }
     
     .section-2-heading{
