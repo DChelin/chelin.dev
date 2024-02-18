@@ -49,20 +49,19 @@
         </tr>
         <tr>
             <td>
-                <form class = "" action="" method="post">
-                    <input class="form-control" type="text" id="passwordOutput" name="result" value="<?php echo(@$result); ?>">
-                    <button class="btn btn-primary" onclick="copyToClipboard()">Copy to Clipboard</button><br><br>
-                    <input type="checkbox" name="valueone" value="6" onclick="uncheckOthers(this)"> 6 Characters<br>
-                    <input type="checkbox" name="valuetwo" value="10" onclick="uncheckOthers(this)"> 10 Characters<br>
-                    <input type="checkbox" name="valuethree" value="12" onclick="uncheckOthers(this)"> 12 Characters<br>
-                    <input type="checkbox" name="valuefour" value="16" onclick="uncheckOthers(this)"> 16 Characters<br>
-                    <input type="checkbox" name="valuefive" value="20" onclick="uncheckOthers(this)"> 20 Characters<br>
-                    <input type="checkbox" name="valuesix" value="30" onclick="uncheckOthers(this)"> 30 Characters<br>
-                    <input type="checkbox" name="valueseven" value="45" onclick="uncheckOthers(this)"> 45 Characters<br>
-                    <input type="checkbox" name="valueeight" value="60" onclick="uncheckOthers(this)"> 60 Characters<br>
-                    <input type="checkbox" name="valuenine" value="90" onclick="uncheckOthers(this)"> 90 Characters<br>
-                    <input type="checkbox" name="valuenine" value="100" onclick="uncheckOthers(this)"> 100 Characters<br>
-                    <input type="checkbox" name="valuenine" value="128" onclick="uncheckOthers(this)"> 128 Characters<br>
+            <form class="" action="" method="post" onsubmit="generatePassword(event)">
+                    <input class="form-control" type="text" id="passwordOutput" name="result" value=""><br>
+                    <input type="checkbox" name="valueone" value="6"> 6 Characters<br>
+                    <input type="checkbox" name="valuetwo" value="10"> 10 Characters<br>
+                    <input type="checkbox" name="valuethree" value="12"> 12 Characters<br>
+                    <input type="checkbox" name="valuefour" value="16"> 16 Characters<br>
+                    <input type="checkbox" name="valuefive" value="20"> 20 Characters<br>
+                    <input type="checkbox" name="valuesix" value="30"> 30 Characters<br>
+                    <input type="checkbox" name="valueseven" value="45"> 45 Characters<br>
+                    <input type="checkbox" name="valueeight" value="60"> 60 Characters<br>
+                    <input type="checkbox" name="valuenine" value="90"> 90 Characters<br>
+                    <input type="checkbox" name="valueten" value="100"> 100 Characters<br>
+                    <input type="checkbox" name="valueeleven" value="128"> 128 Characters<br>
                     <input type="submit" class="btn btn-primary" name="gen" value="Generate">
                 </form>
             </td>
@@ -81,7 +80,7 @@
             }
             document.getElementById("passwordOutput").value = result;
         }
-        
+
         function copyToClipboard() {
             var copyText = document.getElementById("passwordOutput");
             copyText.select();
@@ -96,7 +95,7 @@
                 if (cb !== checkbox) {
                     cb.checked = false;
                 }
-            });
+            }); 
         }
     </script>
 
