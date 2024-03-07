@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image and Text Table</title>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    table, th, td {
+        border: 1px solid black;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    .icon {
+        width: 20px;
+        height: 20px;
+        background-color: blue;
+        display: inline-block;
+    }
+</style>
+</head>
+<body>
+
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td width="20%" style="border-collapse: collapse;">
+      <img src="https://via.placeholder.com/150" alt="Square Image">
+    </td>
+    <td width="80%" style="border-collapse: collapse;">
+      <table cellspacing="0" cellpadding="0" border="0" style="width: 100%; border-collapse: collapse;">
+        <tr>
+          <td width="20" height="20" style="border-collapse: collapse;"></td>
+          <td style="border-collapse: collapse;">Text description 1</td>
+        </tr>
+        <tr>
+          <td width="20" style="border-collapse: collapse;"><span class="icon" style="border-collapse: collapse;"></span></td>
+          <td style="border-collapse: collapse;">Text description 2</td>
+        </tr>
+        <tr>
+          <td width="20" style="border-collapse: collapse;"><span class="icon" style="border-collapse: collapse;"></span></td>
+          <td style="border-collapse: collapse;">Text description 3</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
