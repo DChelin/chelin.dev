@@ -245,6 +245,15 @@ html{
     width: 35rem;
     letter-spacing: .3rem;
 }
+
+.service-heading{
+    font-size: 2rem;
+    color: #fff;
+    background-color: #050505;
+    width: 35rem;
+    letter-spacing: .3rem;
+}
+
 /*End of Section 2*/
 
 /*Download Section*/
