@@ -679,6 +679,7 @@ html{
     }
 
     .section-1-btn{
+        display: none;
         font-size: 3rem;
         margin-bottom: -4rem;
     }
